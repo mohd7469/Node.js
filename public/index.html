@@ -3,11 +3,25 @@
 <head lang="en">
     <meta charset="UTF-8">
     <title></title>
+    <script type="text/javascript" src="libraries/angular/angular.min.js"></script>
+    <script type="text/javascript" src="javascripts/app.js"></script>
 </head>
-<body>
-<form method="post" action="/">
-    Name: <input type="text" name="name"/>
-    <input type="submit"/>
-</form>
+<body ng-app="myApp">
+
+<div ng-controller="myCtrl">
+    <div ng-repeat="val in data">
+        {{val.name}}
+    </div>
+    {{data.name}}
+    {{data.roll}}<br/>
+
+    <button ng-click="makeRequest()">makeRequest</button>
+    <button ng-click="arrReq()">arrayRequest</button>
+    <button ng-click="postReq()">postRequest</button>
+</div>
+<!--<form method="post" action="/">-->
+    <!--Name: <input type="text" name="name"/>-->
+    <!--<input type="submit"/>-->
+<!--</form>-->
 </body>
 </html>
